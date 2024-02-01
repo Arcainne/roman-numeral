@@ -9,7 +9,7 @@
     "start": "node ./src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sean Smith",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.56.0",
