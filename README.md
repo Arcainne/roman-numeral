@@ -13,14 +13,20 @@ yarn install
 2. Build
 
 ```
-yarn
+yarn build
 ```
 
 3. Run
 
 ```
+// Dev mode (with reload)
+yarn dev
+
+// Prod mode (without reload)
 yarn start
 ```
+
+You should be able to navigate to `http://localhost:8080/`. It will re-route you to `http://localhost:8080/romannumeral` automatically, where you can enter in integer values into a React UI and see the corresponding Roman numeral.
 
 # Methodology
 
@@ -34,7 +40,11 @@ yarn start
 This project uses `Jest` for its unit testing framework. To run the unit test suite, run:
 
 ```
-yarn test
+// Development (without coverage)
+yarn test:dev
+
+// Production (with coverage)
+yarn test:prod
 ```
 
 These tests verify the input (both type and value) and expected output of the `integerToRomanNumeral(input)` function.
