@@ -44,18 +44,25 @@ These tests verify the input (both type and value) and expected output of the `i
 ```
 ./
 ├── dist/
-│   ├── index.html
-│   └── main.js
+│   ├── assets/
+│   └── index.html
 ├── node_modules/
+├── public/
 ├── src/
-│   ├── tests/
-│   ├── index.js
-│   └── server.js
+│   ├── components/
+│   │   └── App.jsx
+│   ├── server/
+│   │   └── server.js
+│   ├── utils/
+│   │   ├── tests/
+│   │   │   └── integerToRomanNumeral.test.js
+│   │   └── integerToRomanNumeral.js
+│   └── index.jsx
 ├── README.md
+├── index.html
 ├── jest.config.json
-├── package-lock.json
 ├── package.json
-├── webpack.config.js
+├── vite.config.js
 └── yarn.lock
 ```
 
