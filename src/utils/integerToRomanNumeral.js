@@ -15,10 +15,10 @@ function integerToRomanNumeral(input) {
 
   // Define Roman numeral matrix
   const RN_MATRIX = [
-    ["", "M", "MM", "MMM"],
-    ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
-    ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
     ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+    ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
+    ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
+    ["", "M", "MM", "MMM"],
   ];
 
   // Convert each digit to an integer to index inside RN_MATRIX
@@ -27,10 +27,10 @@ function integerToRomanNumeral(input) {
   const tens = Math.floor((inputNumber % 100) / 10);
   const ones = Math.floor(inputNumber % 10);
   return (
-    RN_MATRIX[0][thousands] +
-    RN_MATRIX[1][hundreds] +
-    RN_MATRIX[2][tens] +
-    RN_MATRIX[3][ones]
+    RN_MATRIX[3][thousands] +
+    RN_MATRIX[2][hundreds] +
+    RN_MATRIX[1][tens] +
+    RN_MATRIX[0][ones]
   );
 }
 

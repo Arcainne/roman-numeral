@@ -1,5 +1,5 @@
 import { describe, test, expect } from "@jest/globals";
-import integerToRomanNumeral from "../index";
+import integerToRomanNumeral from "../integerToRomanNumeral";
 
 describe("integerToRomanNumeral Tests", () => {
   const tests = [

@@ -2,25 +2,36 @@
   "name": "roman-numeral",
   "version": "1.0.0",
   "description": "Convert a base-10 integer to its Roman numeral equivalent.",
-  "main": "./src/server.js",
   "type": "module",
   "scripts": {
-    "test": "yarn node --experimental-vm-modules $(yarn bin jest)",
-    "start": "node ./src/server.js"
+    "start": "node ./src/server/server.js",
+    "dev": "nodemon /src/server/server.js -w src/server",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "test:dev": "yarn node --experimental-vm-modules $(yarn bin jest)",
+    "test:prod": "yarn node --experimental-vm-modules $(yarn bin jest) --coverage"
   },
   "keywords": [],
   "author": "Sean Smith",
   "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.29.1",
-    "jest": "^29.7.0",
-    "typescript": "^5.3.3",
-    "webpack": "^5.90.0",
-    "webpack-cli": "^5.1.4"
-  },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6.22.0",
+    "vite-express": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "nodemon": "^3.0.1",
+    "vite": "^5.0.8",
+    "jest": "^29.7.0"
   }
 }
